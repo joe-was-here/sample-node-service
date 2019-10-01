@@ -1,0 +1,25 @@
+{
+  "name": "service-server-template",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "engines": {
+    "node": "10.16.3"
+  },
+  "repository": "git@github.com:jmadden85/sample-node-service.git",
+  "author": "Joe Madden <joe.madden@gopetplan.com>",
+  "license": "MIT",
+  "scripts": {
+    "watch": "tsc -w --preserveWatchOutput",
+    "start": "pm2 start ecosystem.config.js",
+    "start:prod": "node src/index.js",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.1",
+    "pm2": "^3.5.1",
+    "typescript": "^3.6.3"
+  }
+}

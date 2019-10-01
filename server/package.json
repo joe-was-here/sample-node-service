@@ -13,7 +13,13 @@
     "start": "pm2 start ecosystem.config.js",
     "start:prod": "node src/index.js",
     "build": "tsc",
-    "postinstall": "./config/scripts/post-install.sh"
+    "postinstall": "./config/scripts/post-install.sh",
+    "checkCommit": "commitlint -g ./config/commitlint.config.js --from=HEAD~1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "yarn run checkCommit"
+    }
   },
   "dependencies": {
     "express": "^4.17.1"

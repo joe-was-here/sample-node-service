@@ -10,7 +10,7 @@
   "license": "MIT",
   "scripts": {
     "watch": "tsc -w --preserveWatchOutput",
-    "start": "pm2 start ecosystem.config.js",
+    "start": "pm2 start ./config/ecosystem.config.js",
     "start:prod": "node src/index.js",
     "build": "tsc",
     "postinstall": "./config/scripts/post-install.sh",
@@ -37,6 +37,7 @@
     "eslint-plugin-import": "^2.18.2",
     "husky": "^3.0.7",
     "pm2": "^3.5.1",
+    "prettier": "^1.18.2",
     "typescript": "^3.6.3"
   }
 }

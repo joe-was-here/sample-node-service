@@ -4,8 +4,8 @@ services:
   example-service:
     build: .
     volumes:
-      - .:/usr/src/app
-      - /usr/src/app/node_modules
+      - .:/usr/src/service
+      - /usr/src/service/node_modules
     ports:
       - 3000:3000
       - 9229:9229

@@ -1,6 +1,6 @@
 FROM node:10-alpine
 
-WORKDIR /usr/src/app
+WORKDIR /usr/src/service
 
 COPY package*.json ./
 RUN yarn install && yarn cache clean --force

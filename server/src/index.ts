@@ -1,9 +1,15 @@
 import * as express from 'express';
+import * as bodyParser from 'body-parser';
+import templateRouter from './routes/template';
 
-const server = new express();
+// Server setup
+const server = express();
 const port = 3000;
 
-server.get('/', (req, res) => res.send('Hello world 2.0 with eco config that handles ts watch and server updates'));
+
+server.use(bodyParser.json());
+
+server.use('/', templateRouter);
 
 process.on('SIGINT', function() {
     console.log('Server received shutdown signal, exiting process');

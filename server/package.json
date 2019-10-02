@@ -10,10 +10,9 @@
   "license": "MIT",
   "scripts": {
     "watch": "tsc -w --preserveWatchOutput",
-    "start": "pm2 start ./config/ecosystem.config.js",
-    "start:prod": "node src/index.js",
+    "start": "pm2-dev start ./config/ecosystem.config.js",
+    "start:prod": "pm2 start ./config/ecosystem.config.js",
     "build": "tsc",
-    "postinstall": "./config/scripts/post-install.sh",
     "checkCommit": "commitlint -g ./config/commitlint.config.js --from=HEAD~1"
   },
   "husky": {
@@ -32,7 +31,6 @@
     "@types/express": "^4.17.1",
     "@types/morgan": "^1.7.37",
     "@types/node": "^12.7.9",
-    "@types/winston": "^2.4.4",
     "@typescript-eslint/eslint-plugin": "^2.3.2",
     "@typescript-eslint/parser": "^2.3.2",
     "commitlint": "^8.2.0",

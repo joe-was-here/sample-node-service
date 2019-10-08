@@ -1,4 +1,4 @@
-FROM node:10
+FROM node:10-alpine
 
 WORKDIR /usr/src/service
 
@@ -11,8 +11,6 @@ COPY . .
 ARG NODE_ENV=development
 ENV NODE_ENV=${NODE_ENV}
 
-# RUN npm install pm2 -g
+USER node
 
-# CMD ["pm2-runtime", "dist/index"]
-# CMD ["yarn", "run", "build"]
-# CMD ["yarn", "run", "start"]
+CMD ["yarn", "run", "start"]

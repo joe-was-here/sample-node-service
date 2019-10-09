@@ -17,7 +17,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "yarn run checkCommit"
+      "pre-push": "npm run checkCommit"
     }
   },
   "dependencies": {

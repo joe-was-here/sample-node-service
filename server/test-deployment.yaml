@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: service-deployment
+  name: test-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: service-app
+      app: test-app
   template:
     metadata:
       labels:
-        app: service-app
+        app: test-app
     spec:
       containers:
-        - name: service-container
-          image: service:local
+        - name: test-container
+          image: test:latest
           imagePullPolicy: Never
           ports:
-            - containerPort: 3000
+            - containerPort: 8080

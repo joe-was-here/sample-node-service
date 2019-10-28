@@ -1,6 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import morgan from 'morgan';
+import helmet from 'helmet';
 import templateRouter from './routes/template';
 import logger from './winston';
 
@@ -16,6 +17,9 @@ class MorganStream {
 }
 const morganStream = new MorganStream();
 server.use(morgan('combined', { stream: morganStream }));
+
+// Helmet to fight bad guys
+server.use(helmet());
 
 // Using body parser for json, change this if you aren't expecting json
 server.use(bodyParser.json());

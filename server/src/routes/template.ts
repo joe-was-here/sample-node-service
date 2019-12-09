@@ -2,8 +2,8 @@ import * as express from 'express';
 
 const router = express.Router();
 
-import * as templatController from '../controllers/template';
+import * as templateController from '../controllers/template';
 
-router.get('/', templatController.sendHello);
+router.get('/', templateController.sendHello);
 
 export default router;
